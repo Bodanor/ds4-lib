@@ -21,8 +21,11 @@ int main()
 
     while (1)
     {
-        get_ds4_key(ds4);
-        print_ds4_debug_key(ds4);
+        if (get_ds4_key(ds4) == CROSS_PRESSED)
+        {
+            printf("OK");
+            fflush(stdout);
+        }
     }
 
 }
